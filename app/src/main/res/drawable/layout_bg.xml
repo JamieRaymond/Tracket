@@ -8,8 +8,12 @@
         android:width="3dp"
         android:color="#B1BCBE" />
 
+    <!-- Only rounded 2 of the corners -->
     <corners
-        android:radius="10dp" />
+        android:topLeftRadius="10sp"
+        android:topRightRadius="0sp"
+        android:bottomLeftRadius="10sp"
+        android:bottomRightRadius="0sp"/>
 
     <padding
         android:bottom="0dp"
