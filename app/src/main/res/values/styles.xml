@@ -1,21 +1,29 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    <!-- Light theme -->
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/lightThemeColorPrimary</item>
+        <item name="colorPrimaryDark">@color/lightThemeColorPrimaryDark</item>
+        <item name="colorAccent">@color/lightThemeColorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyleLight</item>
     </style>
 
-    <style name="CustomActionBar" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="background">@color/colorPrimaryDark</item>
+    <!-- Dark theme -->
+    <style name="AppThemeDark" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/darkThemeColorPrimary</item>
+        <item name="colorPrimaryDark">@color/darkThemeColorPrimaryDark</item>
+        <item name="colorAccent">@color/darkThemeColorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyleDark</item>
     </style>
 
-    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+    <style name="DrawerArrowStyleLight" parent="@style/Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">false</item>
         <item name="color">#000000</item>
+    </style>
+
+    <style name="DrawerArrowStyleDark" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <item name="color">#ffffff</item>
     </style>
 
 </resources>

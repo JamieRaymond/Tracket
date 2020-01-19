@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         try {
             if (android.os.Build.VERSION.SDK_INT >= 21) {
                 getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);//  set status text dark
-                getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,R.color.colorPrimary));// set status background white
+                getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,R.color.lightThemeColorPrimary));// set status background white
             }
         } catch (Exception e) {
             e.printStackTrace();
