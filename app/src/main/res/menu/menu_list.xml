@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:ShowIn="navigation_view">
 
     <!-- checkableBehavior="single" means only one item can be selected at a time -->
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/theme"
-            app:actionViewClass="android.widget.Switch"
-            android:title="Theme" />
+            android:id="@+id/theme_switch"
+            android:title="Theme"
+            app:actionViewClass="android.widget.Switch" />
 
         <item
-            android:id="@+id/week_start"
-            app:actionViewClass="android.widget.Switch"
-            android:title="Week Start" />
+            android:id="@+id/week_start_switch"
+            android:title="Week Start"
+            app:actionViewClass="android.widget.Switch" />
 
         <item
-            android:id="@+id/time_format"
-            app:actionViewClass="android.widget.Switch"
-            android:title="Time Format" />
+            android:id="@+id/time_format_switch"
+            android:title="Time Format"
+            app:actionViewClass="android.widget.Switch" />
 
         <item
-            android:id="@+id/default_time_range"
-            app:actionViewClass="android.widget.Switch"
-            android:title="Default Time Range" />
+            android:id="@+id/default_time_range_switch"
+            android:title="Default Time Range"
+            app:actionViewClass="android.widget.Switch" />
 
     </group>
 
