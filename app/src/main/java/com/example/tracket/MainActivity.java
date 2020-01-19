@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -19,6 +21,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    Switch switchTheme;
+    //Switch switchWeekStart;
+    //Switch switchTimeFormat;
+    //Switch switchDefaultTimeRange;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        //This makes the navigation drawer button work and not crash the app cause the drawer comes from the right instead of the left(default).
+        //This makes the navigation drawer button work and not crash the app because the drawer comes from the right instead of the left(default).
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -70,6 +76,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 
         //--------------------------------------------------------------------------------------------------------------------------------------------
+
+        //--------------------------------------------------------------------------------------------------------------------------------------------
+        /*
+
+        switchTheme = findViewById(R.id.theme_switch);
+
+        switchTheme.setChecked(false);
+
+        switchTheme.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked == true)
+                {
+                    toolbar.setBackgroundColor(getResources().getColor(R.color.darkThemeColorPrimary));
+                }
+            }
+        });*/
+
     }
 
     @Override
