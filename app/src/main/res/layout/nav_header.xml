@@ -8,25 +8,28 @@
 
     <!-- android:gravity="end" makes everything in the nav header go to the right -->
 
-    <ImageView
-        android:id="@+id/user_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="8sp"
-        android:src="@mipmap/ic_launcher_round" />
+    <!-- <ImageView
+         android:id="@+id/user_image"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="8sp"
+         android:src="@mipmap/ic_launcher_round" /> -->
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="32sp"
         android:paddingTop="8sp"
-        android:text="User Name"
+        android:text="Settings"
         android:textColor="#000000" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:paddingTop="8sp"
-        android:text="Jamie Raymond"
+        android:text="Edit Activities"
         android:textColor="#000000" />
 
 </LinearLayout>
