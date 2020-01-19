@@ -36,7 +36,9 @@
     <!-- NavigationView layout -->
     <!-- Problem with android:layout_gravity="right"
          Can't get the hamburger icon for navigation drawer to go to the right of screen.
-         Might need to make custom ActionBar.-->
+         Might need to make custom ActionBar.
+         **UPDATE** Tried custom ActionBar. It might work, but I can't seem to get rid of the default one.
+                    Think the nav drawer is interacting with it or something so it won't disappear.-->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
