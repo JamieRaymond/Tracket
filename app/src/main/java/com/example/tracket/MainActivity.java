@@ -13,10 +13,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, CompoundButton.OnCheckedChangeListener {
 
     //FOR SWITCH - implement Switch.OnCheckedChangeListener
 
@@ -79,19 +80,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //--------------------------------------------------------------------------------------------------------------------------------------------
 
         //--------------------------------------------------------------------------------------------------------------------------------------------
-        /* STILL WORKING ON THIS
-        //COULD BE HELPFUL - https://abhiandroid.com/ui/switch
+        //Helpful Links
+        //https://stackoverflow.com/questions/14825850/why-does-setoncheckedchangelistener-cause-crash
+        //https://stackoverflow.com/questions/32091709/how-to-get-set-action-event-in-android-actionbar-switch
 
         switchTheme = findViewById(R.id.theme_switch);
-
-        switchTheme.setChecked(true);
-
-        switchTheme.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-            }
-        });*/
-
+        if(switchTheme != null){
+            switchTheme.setOnCheckedChangeListener(this);
+        }
     }
 
     @Override
@@ -110,15 +106,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return false;
     }
 
-    //PART OF SWITCH
-    /*
+    //Switch Stuff
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        if(isChecked == true)
-        {
-            switchTheme.setChecked(true);
-            //toolbar.setBackgroundColor(getResources().getColor(R.color.darkThemeColorPrimary));
-            drawerLayout.setBackgroundColor(getResources().getColor(R.color.darkThemeColorPrimary));
+        Toast.makeText(this, "The Switch is " + (isChecked ? "on" : "off"),
+                Toast.LENGTH_SHORT).show();
+        if(isChecked == true) {
+            Toast.makeText(this, "The Switch is " + (isChecked ? "on" : "off"),
+                    Toast.LENGTH_SHORT).show();
+        } else {
+            drawerLayout.setBackgroundColor(getResources().getColor(R.color.lightThemeColorPrimary));
         }
-    }*/
+    }
 }
