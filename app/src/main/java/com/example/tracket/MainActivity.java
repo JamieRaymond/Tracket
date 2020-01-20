@@ -18,6 +18,8 @@ import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
+    //FOR SWITCH - implement Switch.OnCheckedChangeListener
+
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -64,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //This makes the navigation drawer button work and not crash the app because the drawer comes from the right instead of the left(default).
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 if (drawerLayout.isDrawerOpen(Gravity.RIGHT)) {
@@ -78,18 +79,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //--------------------------------------------------------------------------------------------------------------------------------------------
 
         //--------------------------------------------------------------------------------------------------------------------------------------------
-        /*
+        /* STILL WORKING ON THIS
+        //COULD BE HELPFUL - https://abhiandroid.com/ui/switch
 
         switchTheme = findViewById(R.id.theme_switch);
 
-        switchTheme.setChecked(false);
+        switchTheme.setChecked(true);
 
         switchTheme.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked == true)
-                {
-                    toolbar.setBackgroundColor(getResources().getColor(R.color.darkThemeColorPrimary));
-                }
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
             }
         });*/
 
@@ -110,4 +109,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         return false;
     }
+
+    //PART OF SWITCH
+    /*
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if(isChecked == true)
+        {
+            switchTheme.setChecked(true);
+            //toolbar.setBackgroundColor(getResources().getColor(R.color.darkThemeColorPrimary));
+            drawerLayout.setBackgroundColor(getResources().getColor(R.color.darkThemeColorPrimary));
+        }
+    }*/
 }
